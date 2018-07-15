@@ -1,0 +1,36 @@
+<div class="container">
+<br>
+  <div class="card">
+    <div class="card-body">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>Link</th>
+            <th>Location</th>
+            <th>Rating</th>
+            <th>Show On Map</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @foods.each do |food| %>
+            <tr>
+              <td><%= food.name %></td>
+              <td><%= food.link %></td>
+              <td><%= food.location %></td>
+              <td><%= food.rating %></td>
+              <td><%= link_to 'Show', food %></td>
+            </tr>
+          <% end %>
+
+        </tbody>
+      </div>
+    </div>
+  </table>
+</div>
+
+
+
+<br>

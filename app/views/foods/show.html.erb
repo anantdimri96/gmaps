@@ -1,0 +1,37 @@
+<div class="container">
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <p id="notice"><%= notice %></p>
+
+      <div id="map-canvas" style="height:100% ; width:100%;">
+        <img src="http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=<%=@location+" bangalore" %>"%>
+      </div>
+
+      <p>
+        <strong>Name:</strong>
+        <%= @food.name %>
+      </p>
+
+      <p>
+        <strong>Link:</strong>
+        <%= @food.link %>
+      </p>
+
+      <p>
+        <strong>Location:</strong>
+        <%= @food.location %>
+      </p>
+
+      <p>
+        <strong>Rating:</strong>
+        <%= @food.rating %>
+      </p>
+
+      <%= link_to 'Edit', edit_food_path(@food) %>
+      |
+      <%= link_to 'Back', foods_path %>
+
+    </div>
+
+    <br>
