@@ -1,13 +1,14 @@
 <div class="container">
 <br>
-  <div class="card">
+  <div id="map-canvas" style="height:40px;">
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location+ " BANGALORE"}" %>
+      </div>
+  <div class="card" style="margin-top: 280px;">
     <div class="card-body">
       <p id="notice"><%= notice %></p>
 
-      <div id="map-canvas" style="height:40px;">
-      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location}" %>
-      </div>
-
+    
+      <br><br>
       <p>
         <strong>Name:</strong>
         <%= @food.name %>
